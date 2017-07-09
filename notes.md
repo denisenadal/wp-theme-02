@@ -1,4 +1,9 @@
 #TODO #
+EXPORT WP DATABASE AND INSTALL LOCALLY
+-add function to add default TAXS
+-add function to mod meta boxes based on taxonomy
+-add css per tax 
+
 * make a custom post type: portfolio_post
 	- portfolio_post should have a custom taxonomy associated with it.
 	- the default fields for a portfolio_post:

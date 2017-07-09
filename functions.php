@@ -3,36 +3,27 @@
  *functions file
  *Denise Nadal Portfolio Site Custom Theme 2016
  */
- /*register sidebars*/
- register_sidebar( array(
-         'name' =>'Blog Sidebar' ,
-         'id' => 'sidebar-1',
-         'description' => 'sidebar area for widgets on blog pages',
-         'before_widget' => '<div id="%1$s" class="widget %2$s col12l">',
- 	'after_widget'  => '</div>',
- 	'before_title'  => '<h2 class="widget-title">',
- 	'after_title'   => '</h2>',
-     ) );
+ include_once(dirname(__FILE__).'/includes/menus.php');
+ include_once(dirname(__FILE__).'/includes/sidebars.php');
+ include_once(dirname(__FILE__).'/includes/portfolio_posts.php');
+ include_once(dirname(__FILE__).'/includes/taxonomies.php');
+
+
 
  /*add support for post thumbnails*/
 add_theme_support('post-thumbnails');
 
-/*registers main menu*/
-function register_my_menu() {
-  register_nav_menu('header-menu',__( 'Header Menu' ));
-}
-add_action( 'init', 'register_my_menu' );
 /*add get the slug function*/
 function get_the_slug( $id=null ){
-if( empty($id) ):
-	global $post;
-		if( empty($post) )
-		 return ''; // No global $post var available.
-	$id = $post->ID;
-	  endif;
-	$slug = basename( get_permalink($id) );
-	 return $slug;
-	}
+	if( empty($id) ):
+		global $post;
+			if( empty($post) )
+			 return ''; // No global $post var available.
+		$id = $post->ID;
+		  endif;
+		$slug = basename( get_permalink($id) );
+		 return $slug;
+		}
 /**
  * Display the page or post slug
  *
