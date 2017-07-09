@@ -1,0 +1,278 @@
+
+/*-----------------index & contact page styling */
+
+#index, #contact{
+	background: url('http://denisenadal.com/wp-content/uploads/2016/10/striped-bg.svg') no-repeat center center;
+	background-size:cover;
+}
+#index > *, #contact > *{
+	background:none;
+}
+#contact nav{
+	background:#fff100;
+	color: #EC008B;
+}
+#contact-icon{
+	float: left;
+	transform: rotate(10deg);
+	margin: 0px 1rem 0px -1rem;
+	color: rgb(84, 0, 216);
+}
+#index #site_title, #contact #site_title{
+	visibility:hidden;
+}
+.fancytype{
+	font-family: 'Pacifico', cursive;
+	color: #EC008B; /*pink*/
+	font-size:4.4rem;
+	line-height:4.8rem;
+	margin:0;
+}
+.subheader{
+	font-family: 'Francois One', sans-serif;
+	color:rgba(84,0,216,1);/*purple*/
+	text-transform: uppercase;
+	font-size:2.2rem;
+	line-height:2.6rem;
+}
+#intro{
+	font-size:1.6rem;
+	padding-top:30vh;
+}
+#index footer, #contact footer{
+	display:none;
+}
+/*---------------------------------portfolio landing page styling */
+
+.portfolio_page .subheader {
+	font-size:2rem;
+	line-height:2.2rem;
+	margin-left:2rem;
+}
+.portfolio_link{
+	display:block;
+	padding:1rem;
+	height:50vh;
+	background: center center no-repeat;
+	background-size:cover;
+	position:relative;
+	box-shadow:0px 0px 3px 0px rgba(50, 50, 50, 0.3);
+	width:100%;
+	overflow:hidden;
+
+}
+
+.portfolio_link:after{
+	content:'';
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	opacity:1;
+	z-index:1;
+	transition: top .5s ease;
+	box-sizing:content-box;
+}
+
+.portfolio_link h3{
+	font-size:4vw;
+	line-height:4vw;
+	z-index:2;
+	position:absolute;
+	left:1rem;
+	bottom:1rem;
+	opacity:1;
+}
+@media all and (max-width:768px){
+.portfolio_link h3 {font-size:12vw;line-height:12vw;}
+}
+@media all and (min-width:1000px) and (max-width:1199px){
+.portfolio_link h3 {font-size:2.8rem;line-height:2.8rem;}
+}
+@media all and (min-width:1200px){
+.portfolio_link h3 {font-size:3.4rem;line-height:3.4rem;}
+}
+
+#web.portfolio_link{
+	background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) ), url('http://denisenadal.com/wp-content/uploads/2016/10/button_web02.jpg');
+	transition: opacity .5s ease;
+}
+#web.portfolio_link:after {
+	background:hsla(174, 76%, 58%,1);/*teal*/
+}
+#art.portfolio_link {
+	background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) ), url('http://denisenadal.com/wp-content/uploads/2016/10/button_art02.jpg');
+}
+#art.portfolio_link:after{
+	background: #FFF100;
+}
+.portfolio-page .row div:nth-of-type(2){
+	padding:2rem 1rem;
+}
+#gd.portfolio_link{
+	background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('http://denisenadal.com/wp-content/uploads/2016/10/button_gd02.jpg');
+}
+#gd.portfolio_link:after{
+	background:#EC008B;
+}
+a.portfolio_link:hover:after{
+	height: auto;
+    bottom: 0;
+    top: 65%;}
+}
+
+
+/*------------------------------Portfolio Subpages Styling---------------*/
+.portfolio_item a:nth-child(2),.portfolio_item a:nth-child(3){
+	margin-top:4rem;
+	display:block;
+}
+.portfolio_item img{
+	width:100%;
+}
+.blue-bg{
+	background:rgba(255, 255, 255,.54);
+}
+.portfolio_item a{
+box-shadow:0px 1px 3px 0px rgba(50, 50, 50, 0.3);
+}
+figure.web_link{
+	position:relative;
+	margin-bottom:3rem;
+	overflow:hidden;
+	box-shadow:0px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	background:#fff;
+	line-height:0;
+}
+.web_link figcaption{
+	background:#EC008B;
+	padding:2rem;
+	line-height:1.6rem;
+	color:#fff;
+	position:absolute;
+	bottom:-250px;
+	left:0;
+	right:0;
+	width:100%;
+	transition:all .5s ease-out;
+	z-index:1;
+}
+.web_link:hover figcaption{
+	height:auto;
+	bottom:20%;
+}
+.web_link:hover:after{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	content:" ";
+	background:rgba(255,255,255,.7);
+}
+/*---------------------------------------skills pages styling */
+table{
+	color:#EC008B;
+	font-size:1.5rem;
+}
+tr,td{
+	font-size:1.5rem;
+	height:2.19rem;
+	border-top:.2rem solid #fff;
+}
+tr:nth-of-type(5n+1) > td:first-child{
+	border-top:2rem solid #fff;
+	border-bottom:1px solid rgba(189,204,212,.7);
+	background:rgb(255,236,3);/*yellow*/
+}
+tr:nth-of-type(5n+2) > td{
+	border-top: 1.5rem solid #fff;
+	height: 3.5rem;
+}
+td:first-child{
+	width:33.33%;
+}
+td:last-child{
+	background:hsla(174, 76%, 58%,1);
+	display: flex;
+	text-align:left;
+	width:100%;
+}
+td[colspan="2"]{
+	background:none;
+	width:auto;
+	display:table-cell;
+}
+td > img{
+	height:2rem;
+	margin-right:.5rem;
+	width:0;
+}
+
+/*-------------------------------------experience pages styling */
+#experience main h2{
+	font-size:1.3rem;
+	line-height:2rem;
+}
+#experience main h3{
+	font-family: 'Assistant', sans-serif;
+	font-weight:bold;
+	font-size:1rem;
+	line-height:1.3rem;
+}
+.job_extras img{
+	width:100%;
+	float:right;
+	height:auto;
+	border:1px solid rgba(189,204,212,.7);
+}
+/*--------------------------------blog pages*/
+.widget {
+	background:#9cf0e7;
+	padding:2rem;
+	box-shadow:0px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	margin-bottom: 3rem;
+}
+.widget-title{
+	background: #fff100;
+	padding: 0.25rem 1.5rem;
+	margin: -0.5rem -1.5rem 2rem;
+}
+.widget li{
+	list-style:none;
+	list-style-type:none;
+}
+.widget li a::before{
+	content:"»";
+	display:inline;
+	padding:0 .5rem;
+}
+a.btn{
+	display:inline-block;
+	margin-top:1rem;
+	height:3rem;
+	padding:1rem 2rem;
+	background: #EC008B;
+	font-weight:600;
+	text-transform:uppercase;
+	color:#fff100;
+	text-indent:0;
+	box-shadow:0px 1px 2px 0px rgba(50, 50, 50, 0.2);
+}
+
+#blog-post img{
+	padding: 2rem;
+}
+#blog-post img.float-left{padding-left:0;}
+#blog-post img.float-right{padding-right:0;}
+.contact-name{
+	font-family: 'Pacifico', cursive;
+	color: #EC008B; /*pink*/
+	font-size: 2rem;
+	line-height: 2rem;
+	margin: 1rem 0 0;
+	text-transform: none;
+}

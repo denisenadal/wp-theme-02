@@ -1,0 +1,153 @@
+/*this file only contains mobile styles for header & menus, mobile styles for grid is in main.css*/
+@media all and (max-width:991px){
+header,main,footer{
+	padding:0 5vw;
+}
+header{
+	padding-bottom:0;
+}
+.inner-wrap{
+	width:100%;
+}
+main{
+	padding:100px 5vw 3rem;
+}
+#contact #intro{
+	font-size:1.6rem;
+	padding-top:10vh;
+}
+}
+@media all and (max-width:767px){
+
+header,nav, #index header, #contact header{
+	padding:0;
+	background:rgb(66, 229, 213);
+	position:static;
+}
+#site_title{
+	padding:0 5vw;
+	width:100%;
+}
+#index #site_title, #contact #site_title{
+	visibility:visible;
+}
+#index #intro{
+	padding-top:10vh;
+}
+header .inner-wrap{
+	flex-flow: column wrap;
+	position:static;
+	padding-bottom:0;
+}
+/*sets structure & style of mobile menu*/
+.mobile_label {
+	display:inline;
+	font-family: 'Francois One', sans-serif;
+	color:#fff;/*purple*/
+	font-size:3rem;
+	transition:color .3s ease;
+}
+.full_label,nav svg{
+	display:none;
+}
+.menu-item > a{
+	height:100%;
+}
+#menu-top-nav{
+	flex-flow:row wrap;
+
+}
+.menu-item{
+	width:33.3%;
+	height:32vw;
+	display:block;
+	background:#fff;
+	box-sizing:border-box;
+	line-height:33vw;
+	padding:0;
+	text-indent:5vw;
+	transition:background .3s ease;
+	box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.2);
+} 
+
+#menu-top-nav > li:first-of-type{
+	width:100%;
+	background:#EC008B;
+	padding:0;
+	line-height:normal;
+	text-indent:5vw;
+	height:calc( 32vw + 3rem);
+}
+#menu-top-nav > li:first-of-type a{
+height:auto;
+}
+#menu-top-nav .sub-menu{
+	display:flex;
+	flex-flow:row wrap;
+	z-index:inherit;
+	position:static;
+	width:100%;	
+}
+#skill_label{
+	position:relative;
+	left:-2vw;
+}
+/*sets colors for mobile menu elements*/
+.menu-item:first-of-type > a{
+	color:#FFF100;
+	height:auto;
+	font-family: 'Francois One', sans-serif;
+	font-size: 2rem;
+	padding: .5rem 0;
+}
+.menu-item .menu-item:first-child,
+.menu-item:last-child{
+	background: #FFF100;
+}
+nav > ul > li:first-child:hover,
+.menu-item:nth-child(3){
+	background:#EC008b;
+}
+.menu-item .menu-item:nth-child(2){
+	background:rgba(84,0,216,1);
+}
+.menu-item .menu-item:last-child,
+.menu-item:nth-child(2){
+	background:hsla(174, 76%, 58%,1);
+}
+/*mobile menu hover & active effects*/
+.menu-item:hover, .menu-item .menu-item:hover{
+	background:#fff;
+}
+.menu-item .menu-item:first-child:hover .mobile_label,
+.menu-item .menu-item:first-child:active .mobile_label,
+.menu-item:last-child:hover .mobile_label,
+.menu-item:last-child:active .mobile_label{
+	color:#FFF100;
+}
+.menu-item .menu-item:nth-child(2):hover .mobile_label,
+.menu-item .menu-item:nth-child(2):active .mobile_label{
+	color:rgba(84,0,216,1);
+}
+.menu-item .menu-item:last-child:hover .mobile_label,
+.menu-item .menu-item:last-child:active .mobile_label,
+.menu-item:nth-child(2):hover .mobile_label,
+.menu-item:nth-child(2):active .mobile_label{
+	color:hsla(174, 76%, 58%,1);
+}
+.menu-item:nth-child(3):hover .mobile_label,
+.menu-item:nth-child(3):active .mobile_label{
+	color:#EC008b;
+}
+
+/*------------main*/
+main{
+	padding:2rem;
+}
+.portfolio_link{
+	box-sizing:border-box;
+}
+.portfolio-page .row div:nth-of-type(2){
+	padding:0;
+}
+}

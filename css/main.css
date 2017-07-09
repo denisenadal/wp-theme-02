@@ -1,0 +1,338 @@
+/* For easy grading search this document for A11 for transition effects  */
+
+@import 'https://fonts.googleapis.com/css?family=Francois+One|Pacifico|Assistant:300,600';
+
+/* wp editor*/
+#wpadminbar{
+background:black!important;
+}
+
+/*-----------------general site-wide styling */
+.flex-img{
+height:auto!important;
+max-width:100%;
+}
+
+*, *::before, *::after{
+	Box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+.mobile_label{
+	display:none;
+}
+html,body{
+	font-family: 'Assistant', sans-serif;
+	min-height:100vh;
+	font-size:16px;
+	background:hsla(174, 76%, 58%,1);/*teal*/
+}
+header,main,footer{
+	width:100%;
+	background:hsla(174, 76%, 58%,1);
+}
+h1{
+	font-family: 'Pacifico', cursive;
+	color: #EC008B; /*pink*/
+	margin:0;
+}
+
+h2,h3,h4, table,tr,td{
+	font-family: 'Francois One', sans-serif;
+	color:rgba(84,0,216,1);/*purple*/
+	text-transform: uppercase;
+}
+h2{
+	font-size:2rem;
+	line-height:2.2rem;
+}
+p, .text, input, label{
+	font-family: 'Assistant', sans-serif;
+	font-size:1rem;
+	color:rgb(33,0,124);
+	padding:.5rem 0;
+}
+a {
+	color: #EC008B;
+	text-decoration:none;
+	font-weight:600;
+	transition: color .3s ease;
+}
+a:hover{
+color:rgba(84,0,216,1);/*purple*/
+}
+hr{
+	border:none;
+	border-bottom:1px solid rgba(189,204,212,.7);
+	margin:3rem 0;
+}
+header{
+	position:fixed;
+	z-index:200;
+}
+header .inner-wrap{
+	display:flex;
+	justify-content:space-between;
+	flex-flow:row nowrap;
+}
+header h1{
+	font-size:2.2rem;
+	line-height: 2.2rem;
+	transition: color .3s ease;
+	margin-top:1rem;
+}
+#site_title:hover h1 {
+	color:#fff100;
+}
+header h2{
+	font-size:1.1rem;
+	line-height:1.12rem;
+	color:rgba(84,0,216,1);
+	transition: color .3s ease;
+	display:inline-block;
+}
+header h1:after { 
+content:" "; 
+display:block; 
+}
+#site_title:hover h2 {
+	color:#EC008B;
+}
+nav{
+	padding-top:2rem;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+nav li{
+	display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    letter-spacing: .01rem;
+    text-transform: uppercase;
+    position: relative;
+}
+nav li > a {
+    z-index: 10;
+	position: relative;
+    display: block;
+    padding: 15px 0;
+    height: 45px;
+ }
+ 
+ nav li i.fa {
+ 	opacity:0;
+ 	position: absolute;
+	left: -1rem;
+	top: 1rem;
+ 	transition:	all .3s ease;
+ }
+ /*desktop nav menu styling*/
+ @media all and (min-width:768px){
+ nav svg{
+	width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: -20px;
+	overflow: visible;
+ }
+.current-menu-parent > a, .current-menu-item > a{
+	color:#fff100;
+}
+.current-menu-item:hover > a, .current-menu-parent:hover a {
+	color:#EC008B;
+}
+
+.sub-menu .menu-item:hover i{
+	opacity:1;
+}
+ /* A4 portfolio drop down menu*/
+.sub-menu{ /*styling main drop down*/
+	display:block;
+	position:absolute;
+	top:0px;
+	left:20px;
+	padding:3.5rem 2rem 1rem 2rem;
+	width:200px;
+	background:#fff!important;
+	box-shadow:0px 1px 3px 0px rgba(50, 50, 50, 0.3);
+	display:none;
+	z-index:1;
+}
+.menu-item:hover ul{
+	display:block;
+}
+.menu-item:first-of-type:hover + li{
+	z-index:-4; /*hides "skill" link when portfolio drop-down is shown"*/
+}
+
+.sub-menu .menu-item a { /*styles li's in drop down*/
+	transition: color .3s ease;
+	height:2.5rem;
+	color: #EC008B; /*pink*/
+}
+.menu-item ul li:hover > a{
+	color:rgba(84,0,216,1)!important;/*purple*/
+	text-shadow: 1px 0px 1px rgba(50, 50, 50, 0.2);
+}
+.sub-menu .menu-item{/*styles links in drop down*/
+	padding:0;
+	margin:0;
+}
+}
+/*global styles for main & footer*/
+main{
+	background:white;
+	padding:100px 0 3rem;
+	min-height: calc( 100vh - 70px);
+}
+footer{
+	font-size:1rem;
+	text-align:right;
+	padding:1rem;
+}
+footer p{
+	margin:0;
+}
+.inner-wrap{
+	width:100%;
+	margin:0 auto;
+}
+.float-right{
+	float:right;
+}
+.float-left{
+	float:left;
+}
+.clear{
+	clear:both;
+}
+.tab{
+	margin-right:2rem;
+}
+.col1s, .col2s, .col3s, .col4s, .col5s, .col6s,
+.col7s, .col8s, .col9s, .col10s, .col11s, .col12s,
+.col1m, .col2m, .col3m, .col4m, .col5m, .col6m,
+.col7m, .col8m, .col9m, .col10m, .col11m, .col12m,
+.col1l, .col2l, .col3l, .col4l, .col5l, .col6l,
+.col7l, .col8l, .col9l, .col10l, .col11l, .col12l {
+	float:left;
+	padding:3rem 0rem;
+}
+
+.left-edge{
+	padding-left:0!important;
+	margin-left:0!important;
+}
+.right-edge{
+	padding-right:0!important;
+	margin-right:0!important;
+}
+
+.row{
+margin:-2rem auto;
+}
+.row::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.inner-wrap > .row:first-child{
+	margin-top:0;
+}
+.col1s{ width:8.33%;}
+.col2s{ width:16.66%;}
+.col3s{ width:25%;}
+.col4s{ width:33.3%;}
+.col5s{ width:41.66%;}
+.col6s{ width: 50%;}
+.col7s{ width:58.33%;}
+.col8s{ width:66.66%;}
+.col9s{ width:75%;}
+.col10s{ width:83.33%;}
+.col11s{ width:91.66%;}
+.col12s,.col1m, .col2m, .col3m, .col4m, .col5m, 
+.col6m,.col7m, .col8m, .col9m, .col10m, .col11m,
+ .col12m,.col1l, .col2l, .col3l, .col4l, .col5l,
+ .col6l,.col7l, .col8l, .col9l, .col10l, .col11l, 
+ .col12l,.col1x, .col2x, .col3x, .col4x, .col5x, 
+ .col6x,.col7x, .col8x, .col9x, .col10x, .col11x, 
+ .col12x{ width:100%;}
+
+@media all and (min-width:768px){
+.inner-wrap{
+width:768px;
+}
+.col1m{ width:8.33%;}
+.col2m{ width:16.66%;}
+.col3m{ width:25%;}
+.col4m{ width:33.3%;}
+.col5m{ width:41.66%;}
+.col6m{ width: 50%;}
+.col7m{ width:58.33%;}
+.col8m{ width:66.66%;}
+.col9m{ width:75%;}
+.col10m{ width:83.33%;}
+.col11m{ width:91.66%;}
+.col12m{ width:100%;}
+.col1s, .col2s, .col3s, .col4s, .col5s, .col6s,
+.col7s, .col8s, .col9s, .col10s, .col11s, .col12s,
+.col1m, .col2m, .col3m, .col4m, .col5m, .col6m,
+.col7m, .col8m, .col9m, .col10m, .col11m, .col12m,
+.col1l, .col2l, .col3l, .col4l, .col5l, .col6l,
+.col7l, .col8l, .col9l, .col10l, .col11l, .col12l,
+.col1x, .col2x, .col3x, .col4x, .col5x, .col6x,
+.col7x, .col8x, .col9x, .col10x, .col11x, .col12x {
+	padding:2rem;
+}
+}
+@media all and (min-width:992px){
+.inner-wrap{width:960px;}
+.col1l{ width:8.33%;}
+.col2l{ width:16.66%;}
+.col3l{ width:25%;}
+.col4l{ width:33.3%;}
+.col5l{ width:41.66%;}
+.col6l{ width: 50%;}
+.col7l{ width:58.33%;}
+.col8l{ width:66.66%;}
+.col9l{ width:75%;}
+.col10l{ width:83.33%;}
+.col11l{ width:91.66%;}
+.col12l{ width:100%;}
+}
+
+@media all and (min-width:1200px){
+.inner-wrap{width:1160px;}
+.col1x{ width:8.33%;}
+.col2x{ width:16.66%;}
+.col3x{ width:25%;}
+.col4x{ width:33.3%;}
+.col5x{ width:41.66%;}
+.col6x{ width: 50%;}
+.col7x{ width:58.33%;}
+.col8x{ width:66.66%;}
+.col9x{ width:75%;}
+.col10x{ width:83.33%;}
+.col11x{ width:91.66%;}
+.col12x{ width:100%;}
+}
+.slim{
+	padding:.5rem;
+}
+.slim.row{
+	margin: 0 -1rem;
+	padding:0rem;
+}
+
+
